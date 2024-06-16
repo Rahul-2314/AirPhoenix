@@ -1,0 +1,91 @@
+.the-cohort {
+	text-align: center;
+	margin: 3rem;
+	/* margin-left: 3rem;
+	margin-right: 3rem;
+	margin-top: 0; */
+}
+
+.the-cohort h2,
+h5 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.intro h2{
+	color: var(--color-primary);
+}
+
+.intro p{
+	color: var(--color-white);
+}
+.intro p:hover{
+	color: burlywood;
+	cursor: pointer;
+}
+
+.weeks {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.week {
+	width: calc(30% - 20px);
+	margin-bottom: 20px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.week:hover {
+	transform: translateY(-5px);
+}
+
+.card {
+	background-color: var(--color-primary);
+	color: white;
+	width: 100%;
+	max-width: 250px;
+	height: 100%;
+	border-radius: 8px;
+	padding: 15px;
+	margin-bottom: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+}
+
+.card h3 {
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+
+.card p {
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.card h3 {
+	margin-top: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.card p {
+	margin-bottom: 0;
+}
+
+.card::after {
+	content: "";
+	display: block;
+	width: 40%;
+	height: 2px;
+	background-color: rgba(255, 255, 255, 0.7);
+	margin: 10px auto 0;
+}

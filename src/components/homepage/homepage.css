@@ -1,0 +1,97 @@
+.homepage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1.5rem;
+	text-align: center;
+}
+
+.homepage h5,
+.homepage h2,
+.homepage h3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	/* margin: 0.2rem 0; */
+}
+
+h5 {
+	color: var(--color-light);
+}
+
+h3 {
+	color: var(--color-white);
+	margin-top: 0.5rem;
+}
+
+h2 {
+	color: var(--color-primary);
+}
+
+.cohort {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.cohortpage {
+	background-color: var(--color-primary);
+	border: none;
+	color: var(--color-bg);
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.cohortpage:hover {
+	background-color: var(--color-white);
+}
+
+@keyframes hoverFlow {
+	from {
+		transform: scale(1.1) rotate(5deg);
+	}
+	to {
+		transform: scale(1.1) rotate(-5deg);
+	}
+}
+
+.image1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1.3rem;
+}
+
+.image1 img {
+	height: 22rem;
+	width: 22rem;
+	position: relative;
+	object-fit: cover;
+	border-radius: 50%;
+	box-shadow: 0 8px 16px var(--color-primary);
+	animation: hoverFlow 1s infinite alternate;
+}
+
+@media (max-width: 800px) {
+	.image1 img {
+		height: 18rem;
+		width: 18rem;
+	}
+
+	@media (max-width: 600px) {
+		.image1 img {
+			height: 15rem;
+			width: 15rem;
+		}
+	}
+}

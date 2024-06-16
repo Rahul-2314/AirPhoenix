@@ -1,0 +1,170 @@
+.navbar {
+	background: var(--color-bg);
+	padding: 0.5rem;
+	position: relative;
+}
+
+.container-fluid {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar-brand img {
+	height: 50px;
+	width: 60px;
+	border-radius: 10px;
+	margin-top: 0.2rem;
+	margin-left: 1rem;
+	box-shadow: 0 8px 16px var(--color-primary);
+	transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.navbar-brand img:hover {
+	transform: scale(1.1) rotate(5deg);
+	animation: hoverFlow 1s infinite alternate;
+}
+
+@keyframes hoverFlow {
+	from {
+		transform: scale(1.1) rotate(5deg);
+	}
+	to {
+		transform: scale(1.1) rotate(-5deg);
+	}
+}
+
+.toggle-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	font-size: 1.5rem;
+	display: none;
+	position: absolute;
+	left: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.toggle-icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0;
+}
+
+.navbar-collapse {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-nav {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-item {
+	margin-left: 1rem;
+	font-weight: 500;
+}
+
+.auth-buttons {
+	display: flex;
+	align-items: center;
+}
+
+.nav-link {
+	cursor: pointer;
+}
+
+.sign-in {
+	background-color: var(--color-primary);
+	border: none;
+	color: var(--color-bg);
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	margin-left: 1rem;
+	margin-right: 0.5rem;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.sign-in:hover {
+	background-color: burlywood;
+	color: var(--color-bg);
+}
+
+@media (max-width: 768px) {
+	.toggle-button {
+		display: block;
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: var(--color-primary);
+		font-size: 1.5rem;
+		position: absolute;
+		left: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.toggle-icon {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 0;
+		transition: transform 0.3s ease;
+	}
+
+	.navbar-nav {
+		flex-direction: column;
+		position: absolute;
+		top: 4rem;
+		left: -100%;
+		background-color: var(--color-bg);
+		width: 30%;
+		max-height: 0;
+		border-radius: 25px;
+		margin-top: 10px;
+		overflow: hidden;
+		transition: left 0.3s ease, max-height 0.3s ease;
+	}
+
+	.navbar-collapse.show .navbar-nav {
+		left: 0;
+		max-height: 20rem;
+		overflow-y: auto;
+	}
+
+	.navbar-brand {
+		margin-left: 2rem;
+	}
+
+	.nav-item {
+		margin-left: 0;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 0.5rem;
+	}
+	.nav-link {
+		color: burlywood;
+	}
+
+	.auth-buttons {
+		flex-direction: column;
+		align-items: flex-end;
+		margin-top: 0rem;
+	}
+
+	.sign-in {
+		margin-left: auto;
+		margin-right: 0.5rem;
+		margin-top: 0rem;
+	}
+}

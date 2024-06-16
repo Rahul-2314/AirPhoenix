@@ -1,0 +1,134 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.image-slider-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 2rem;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+}
+
+.heading_imageSlider {
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+}
+
+h2,
+h5 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.text-section {
+	flex: 1 1 45%;
+	padding-right: 2rem;
+	padding-left: 5%;
+	min-width: 250px;
+}
+
+.text-section .main {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	color: var(--color-light);
+}
+
+.text-section .child {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	color: var(--color-white);
+}
+
+.arrow-section {
+	flex-shrink: 0;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.arrow {
+	width: 150px;
+	height: 100px;
+	transition: opacity 0.3s ease;
+	animation: arrowAnimation 5s linear infinite;
+}
+
+.image-slider {
+	flex: 1 1 50%;
+	min-width: 300px;
+}
+
+.partial-image-slider {
+	width: 80%;
+	background-color: rgb(118, 165, 206);
+	padding: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 12px;
+	cursor: pointer;
+	margin-left: 10%;
+	transition: all 0.3s ease;
+	animation: slideInRight 0.5s ease;
+}
+
+.partial-image-slider img {
+	width: 100%;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+	.image-slider-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.text-section {
+		width: 100%;
+		padding: 0 2rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.arrow {
+		width: 150px;
+		height: 130px;
+		transform: rotate(90deg);
+		margin: 2px;
+	}
+
+	.image-slider {
+		width: 80%;
+		text-align: center;
+	}
+
+	.partial-image-slider {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes arrowAnimation {
+	0%,
+	100% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+}
